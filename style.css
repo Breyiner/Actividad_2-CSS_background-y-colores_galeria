@@ -4,43 +4,57 @@
     box-sizing: border-box;
 }
 
+:root {
+  --naranja_cartas: #fc5000;
+  --azul_sombras: #0245ff9c;
+  --negro: #000;
+  --rojo_titulos: #b60c00;
+  --color_transparencia: #ffae7bb2;
+  --blanco: #fff;
+  --azul_puro: blue;
+  --alineacion_centro: center;
+  --fuente: 'Gill Sans', 'Trebuchet MS', sans-serif;
+  --img_encabezado: url(img/DRAGON-BALL-galery-fondo.webp);
+  --img_fondo: url(img/fondo.png);
+}
+
 body{
-    font-family: 'Gill Sans', 'Trebuchet MS', sans-serif;
+    font-family: var(--fuente);
     /* font-family: "Anton", sans-serif; */
     /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
     text-transform: capitalize;
 }
 
 main{
-    background: url(img/fondo.png);
+    background: var(--img_fondo);
     background-attachment: fixed;
     background-size: cover;
 }
 
 header.encabezado{
-    background: url(img/DRAGON-BALL-galery-fondo.webp) rgba(252, 80, 0) no-repeat;
+    background: var(--img_encabezado) var(--naranja_cartas) no-repeat;
     background-size: contain;
-    background-position: center;
+    background-position: var(--alineacion_centro);
     height: 100px;
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid var(--azul_puro);
 }
 
 div.filas{
-    text-align: center;
+    text-align: var(--alineacion_centro);
 }
 
 div.carta{
-    text-align: center;
+    text-align: var(--alineacion_centro);
     width: 360px;
     margin: 10px;
     border-radius: 10px;
     display: inline-block;
-    background-color: rgba(255, 174, 123, 0.698);
-    box-shadow: 0px 0px 5px #0245ff9c;
+    background-color: var(--color_transparencia);
+    box-shadow: 0px 0px 5px var(--azul_sombras);
 }
 
 img.img{
-    filter: drop-shadow(0px 0px 5px #000);
+    filter: drop-shadow(0px 0px 5px var(--negro));
     width: 50%;
     height: 15rem;
     object-fit: contain;
@@ -53,7 +67,7 @@ h1.titulo{
     margin: 15px 10px;
     min-height: 3.5rem;
     max-height: 50px;
-    color: #b60c00;
+    color: var(--rojo_titulos);
 }
 
 p.texto{
@@ -67,13 +81,13 @@ p.texto{
 
 a.boton{
     display: block;
-    background-color: #fc5000e1;
+    background-color: var(--naranja_cartas);
     font-size: 17px;
     text-decoration: none;
-    color: #ffffff;
+    color: var(--blanco);
     border-radius: 5px;
     padding: 7px 10px;
     margin: 60px  30%;
     margin-bottom: 33px;
-    box-shadow: 0px 0px 3px #001d6bb9;
+    box-shadow: 0px 0px 3px var(--azul_sombras);
 }
